@@ -1,5 +1,6 @@
 const express = require('express');
 const ip = require('ip');
+const os = require('os');
 const app = express();
 const router = express.Router();
 const path = __dirname + '/views/';
@@ -12,7 +13,7 @@ router.get('/', function(req,res){
   res.render('index', {title: 'Nodejs Hello World', message: 'Hello World!!!', description: 'Node.js demo application', server_ip: 'Server ip: ' + ip.address()});
 });
 
-outer.get('/info', function(req,res){
+router.get('/info', function(req,res){
   res.render('info', {title: 'Information', os_type: 'OS type: ' + os.type(), release: "Release: " + os.release(),  server_ip: 'Server ip: ' + ip.address(), node_version: "Node.js version: " + process.version});
 });
 
