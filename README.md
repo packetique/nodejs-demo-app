@@ -1,8 +1,9 @@
 # nodejs-demo-app
 Nodejs demo application
 
-Route:
+Routes:
 '/' - "main" page.
+'/info' - "server information" page.
 
 Showing server IP for  visualization of balancing.
-Page generate by pug templates
+Pages generate by pug templates
